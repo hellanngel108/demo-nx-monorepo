@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "parallel": true,
+  "projects": {
+    "admin-app": "apps/admin-app",
+    "admin-app-e2e": "apps/admin-app-e2e",
+    "admin-feature-header": "libs/admin/feature/header",
+    "admin-feature-routes": "libs/admin/feature/routes",
+    "client-app": "apps/client-app",
+    "client-app-e2e": "apps/client-app-e2e",
+    "client-feature-header": "libs/client/feature/header",
+    "my-app": "apps/my-app",
+    "my-app-e2e": "apps/my-app-e2e",
+    "shared-feature-config": "libs/shared/feature/config",
+    "shared-feature-footer": "libs/shared/feature/footer",
+    "shared-pages-homepage": "libs/shared/pages/homepage",
+    "shared-pages-showall": "libs/shared/pages/showall",
+    "shared-ui-header-logo": "libs/shared/ui/header-logo",
+    "shared-ui-header-navlink": "libs/shared/ui/header-navlink",
+    "shared-util-data-sources": "libs/shared/util/data-sources"
+  }
+}

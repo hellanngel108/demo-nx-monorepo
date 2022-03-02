@@ -1,0 +1,8 @@
+.app-wrapper {
+  background-color: beige;
+  &-inner {
+    display: grid;
+    grid-template-rows: 80px auto 40px;
+    grid-template-areas: 'header' 'page' 'footer';
+  }
+}

@@ -1,0 +1,14 @@
+.footer {
+  &-wrapper {
+    grid-area: footer;
+    background-color: #fff;
+    width: 100%;
+    padding: 12px 0;
+    &-inner {
+      margin: 0 auto;
+      max-width: 1200px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

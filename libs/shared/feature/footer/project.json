@@ -1,0 +1,31 @@
+{
+  "root": "libs/shared/feature/footer",
+  "sourceRoot": "libs/shared/feature/footer/src",
+  "projectType": "library",
+  "tags": [
+    "scope:shared"
+  ],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/feature/footer/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/shared/feature/footer"
+      ],
+      "options": {
+        "jestConfig": "libs/shared/feature/footer/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

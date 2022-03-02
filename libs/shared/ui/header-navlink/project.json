@@ -1,0 +1,25 @@
+{
+  "root": "libs/shared/ui/header-navlink",
+  "sourceRoot": "libs/shared/ui/header-navlink/src",
+  "projectType": "library",
+  "tags": ["scope:shared"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/header-navlink/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/ui/header-navlink"],
+      "options": {
+        "jestConfig": "libs/shared/ui/header-navlink/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

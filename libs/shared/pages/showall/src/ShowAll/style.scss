@@ -1,0 +1,19 @@
+.show-all {
+  &-wrapper {
+    grid-area: page;
+    min-height: 800px;
+    &-inner {
+      margin: 0 auto;
+      max-width: 1200px;
+      height: 100%;
+      display: grid;
+      grid-template-areas: 'title' 'body';
+      grid-template-rows: 200px auto;
+      align-items: center;
+      justify-items: center;
+    }
+  }
+  &-title {
+    font-size: 48px;
+  }
+}

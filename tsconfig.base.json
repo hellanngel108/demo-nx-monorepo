@@ -1,0 +1,51 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@demo-org/admin/feature/header": [
+        "libs/admin/feature/header/src/index.js"
+      ],
+      "@demo-org/admin/feature/routes": [
+        "libs/admin/feature/routes/src/index.js"
+      ],
+      "@demo-org/client/feature/header": [
+        "libs/client/feature/header/src/index.js"
+      ],
+      "@demo-org/shared/feature/config": [
+        "libs/shared/feature/config/src/index.js"
+      ],
+      "@demo-org/shared/feature/footer": [
+        "libs/shared/feature/footer/src/index.js"
+      ],
+      "@demo-org/shared/pages/homepage": [
+        "libs/shared/pages/homepage/src/index.js"
+      ],
+      "@demo-org/shared/pages/showall": [
+        "libs/shared/pages/showall/src/index.js"
+      ],
+      "@demo-org/shared/ui/header-logo": [
+        "libs/shared/ui/header-logo/src/index.js"
+      ],
+      "@demo-org/shared/ui/header-navlink": [
+        "libs/shared/ui/header-navlink/src/index.js"
+      ],
+      "@demo-org/shared/util/data-sources": [
+        "libs/shared/util/data-sources/src/index.js"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

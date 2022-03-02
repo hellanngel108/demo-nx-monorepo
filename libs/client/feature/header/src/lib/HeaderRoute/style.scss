@@ -1,0 +1,12 @@
+.header-route-wrapper {
+  grid-column: 3/4;
+  width: 100%;
+  align-self: center;
+  justify-self: center;
+  &-inner {
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

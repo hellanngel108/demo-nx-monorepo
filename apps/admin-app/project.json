@@ -1,0 +1,84 @@
+{
+  "root": "apps/admin-app",
+  "sourceRoot": "apps/admin-app/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:build",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/admin-app",
+        "index": "apps/admin-app/src/index.html",
+        "baseHref": "/",
+        "main": "apps/admin-app/src/main.js",
+        "polyfills": "apps/admin-app/src/polyfills.js",
+        "tsConfig": "apps/admin-app/tsconfig.app.json",
+        "assets": [
+          "apps/admin-app/src/favicon.ico",
+          "apps/admin-app/src/assets"
+        ],
+        "styles": [
+          "apps/admin-app/src/styles.scss"
+        ],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/admin-app/src/environments/environment.js",
+              "with": "apps/admin-app/src/environments/environment.prod.js"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "admin-app:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "admin-app:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "apps/admin-app/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/apps/admin-app"
+      ],
+      "options": {
+        "jestConfig": "apps/admin-app/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": [
+    "scope:admin"
+  ]
+}

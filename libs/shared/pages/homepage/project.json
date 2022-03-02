@@ -1,0 +1,31 @@
+{
+  "root": "libs/shared/pages/homepage",
+  "sourceRoot": "libs/shared/pages/homepage/src",
+  "projectType": "library",
+  "tags": [
+    "scope:shared"
+  ],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/pages/homepage/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/shared/pages/homepage"
+      ],
+      "options": {
+        "jestConfig": "libs/shared/pages/homepage/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

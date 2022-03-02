@@ -1,0 +1,23 @@
+{
+  "root": "libs/admin/feature/routes",
+  "sourceRoot": "libs/admin/feature/routes/src",
+  "projectType": "library",
+  "tags": ["scope:admin"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/admin/feature/routes/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/admin/feature/routes"],
+      "options": {
+        "jestConfig": "libs/admin/feature/routes/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

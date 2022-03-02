@@ -1,0 +1,25 @@
+{
+  "root": "libs/shared/util/data-sources",
+  "sourceRoot": "libs/shared/util/data-sources/src",
+  "projectType": "library",
+  "tags": ["scope:shared"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/util/data-sources/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/util/data-sources"],
+      "options": {
+        "jestConfig": "libs/shared/util/data-sources/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

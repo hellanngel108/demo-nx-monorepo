@@ -1,0 +1,23 @@
+{
+  "root": "libs/admin/feature/header",
+  "sourceRoot": "libs/admin/feature/header/src",
+  "projectType": "library",
+  "tags": ["scope:admin"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/admin/feature/header/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/admin/feature/header"],
+      "options": {
+        "jestConfig": "libs/admin/feature/header/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
